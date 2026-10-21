@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 <!--
-Needs doing:
+
 !-->
 
 
@@ -17,12 +17,18 @@ Home | Scrabalatro
 {% endblock %}
 
 {% block body %}
-<div class="homepagetopbar">
-    <h1 href="#home";>SCRABALATRO</h1>
-    <h2 class="activehomepagetopbarbutton" href="#info">Info</h5>
-    <h4 class="homepagetopbarbutton" href="#login">Login</h2>
-    <h5 class="homepagetopbarbutton" href="#register">Register</h4>
+<div class="topbar_notloggedin">
+    <h1 class="logo"><a href="/">SCRABALATRO</a></h1>
+    <h2 class="activetopbar_notloggedinbutton"><a href="/">Info</a></h2>
+    <h4 class="topbar_notloggedinbutton"><a href="/login">Login</a></h4>
+    <h5 class="topbar_notloggedinbutton"><a href="/register">Register</a></h5>
     <h3>(Balatro with Scrabble tiles)</h3>
+</div>
+
+<div class="infopage">
+
+
+
 </div>
 
 {% endblock %}

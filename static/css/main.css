@@ -49,16 +49,16 @@
 
 
 
-.homepagetopbar {
+.topbar_notloggedin {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto auto auto;
     grid-template-rows: auto auto;
     align-items: center;
     background-color: #333;
     overflow: hidden;
 }
 
-.homepagetopbarbutton {
+.topbar_notloggedinbutton {
     font-family: "Londrina Outline";
     font-weight: 400;
     font-size: 20px;
@@ -71,11 +71,22 @@
     justify-self: right;
 }
 
-.homepagetopbarbutton:hover{
+
+/* WEEWOOWEEWOO!!! AI ALERT WEEWOO */
+.topbar_notloggedinbutton a,
+.activetopbar_notloggedinbutton a,
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+/* WEEWOOWEEWOO!!! AI ALERT FINISHED WEEWOO */
+
+
+.topbar_notloggedinbutton:hover{
     font-family: "Londrina Solid";
 }
 
-.activehomepagetopbarbutton{
+.activetopbar_notloggedinbutton{
     position: relative;
     font-family: "Londrina Solid";
     font-weight: 400;
@@ -91,7 +102,7 @@
 
 
 /* WEEWOOWEEWOO!!! AI ALERT WEEWOO */
-.activehomepagetopbarbutton::after{
+.activetopbar_notloggedinbutton::after{
     content: "";
     position: absolute;
     width: 20px;
@@ -102,6 +113,7 @@
     background: currentColor;
 }
 /* WEEWOOWEEWOO!!! AI ALERT FINISHED WEEWOO */
+
 
 
 h1 {

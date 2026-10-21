@@ -4,10 +4,11 @@ AQA CompSci A-Level Non-Exam Assessment (NEA).A remake of the popular roguelite 
 To do list:
 -
 /1. Decide hands and scoring                                         DONE
-2. Modify power-up tiles around the new hands. (aim for 150)
-2a. Find images for all power-ups
-3. Design power-up tiles and different skins for regular tiles.
+2. Modify power-up tiles around the new hands. (aim for 150)         DONE
+2a. Find images for all power-ups                                    IN PROG
+3. Design power-up tiles and different skins for regular tiles.      
 4. Code front end in JS.
+    - Doesnt work on firefox
 5. Add tutorial.
 
 Hands (ascending base score):
