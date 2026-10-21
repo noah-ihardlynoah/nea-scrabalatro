@@ -1,0 +1,20 @@
+.homepagetopbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+h1 {
+    float: left;
+    padding: 14px 16px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f2f2f2
+}
+
+h2 {
+    float: right;
+    padding: 14px 16px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f2f2f2
+}
