@@ -1,20 +1,147 @@
+
+
+/* ======FONTS======= */
+.londrina-outline-regular {
+  font-family: "Londrina Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.londrina-solid-thin {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.londrina-solid-light {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.londrina-solid-regular {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.londrina-solid-black {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.londrina-shadow-regular {
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ======END OF FONTS=======
+============================
+============================ */
+
+
+
+
+
+
+
+
+
+
 .homepagetopbar {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
     background-color: #333;
     overflow: hidden;
 }
 
-h1 {
-    float: left;
-    padding: 14px 16px;
+.homepagetopbarbutton {
+    font-family: "Londrina Outline";
+    font-weight: 400;
+    font-size: 20px;
+    float: right;
+    align-self: center;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f2f2f2
+    padding: 14px 16px;
+    font-weight: normal;
+    color: #f2f2f2;
+    justify-self: right;
+}
+
+.homepagetopbarbutton:hover{
+    font-family: "Londrina Solid";
+}
+
+.activehomepagetopbarbutton{
+    position: relative;
+    font-family: "Londrina Solid";
+    font-weight: 400;
+    font-size: 20px;
+    float: right;
+    align-self: center;
+    margin: 0;
+    padding: 14px 16px;
+    font-weight: normal;
+    color: #f2f2f2;
+    justify-self: right;
+}
+
+
+/* WEEWOOWEEWOO!!! AI ALERT WEEWOO */
+.activehomepagetopbarbutton::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+    background: currentColor;
+}
+/* WEEWOOWEEWOO!!! AI ALERT FINISHED WEEWOO */
+
+
+h1 {
+    font-family: "Londrina Shadow";
+    font-weight: 400;
+    font-size: 26px;
+    grid-column: 1;
+    grid-row: 1;
+    float: none;
+    padding: 14px 16px;
+    padding-bottom: 2px;
+    margin: 0;
+    color: #f2f2f2;
 }
 
 h2 {
-    float: right;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+h4 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+h3 {
+    font-family: "Londrina Shadow";
+    font-weight: 400;
+    font-size: 18px;
+    clear: both;
+    grid-column: 1;
+    grid-row: 2;
+    clear: none;
     padding: 14px 16px;
+    padding-top: 0px;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f2f2f2
+    color: #f2f2f2;
+}
+
+h5 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
 }

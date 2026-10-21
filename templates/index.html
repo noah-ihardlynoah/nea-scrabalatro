@@ -2,8 +2,7 @@
 
 <!--
 Needs doing:
-1. Fix bar at top, css buggy as always giving them different font sizes
--->
+!-->
 
 
 {% block title %}
@@ -11,13 +10,19 @@ Home | Scrabalatro
 {% endblock %}
 
 {% block head %}
-<div class="homepagetopbar">
-    <h1 href="#home";>Scrabalatro</h1>
-    <h2 href="#login">Login</h2>
-</div>
+
 
 
 
 {% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+<div class="homepagetopbar">
+    <h1 href="#home";>SCRABALATRO</h1>
+    <h2 class="activehomepagetopbarbutton" href="#info">Info</h5>
+    <h4 class="homepagetopbarbutton" href="#login">Login</h2>
+    <h5 class="homepagetopbarbutton" href="#register">Register</h4>
+    <h3>(Balatro with Scrabble tiles)</h3>
+</div>
+
+{% endblock %}
