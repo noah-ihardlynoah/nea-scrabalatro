@@ -191,6 +191,23 @@ h1 a {
 ================================*/
 
 /* Info page */
+/* WEEWOO AI ALERT STARTS */
+body {
+    padding-bottom: 42px;
+}
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 16px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+/* WEEWOOD AI FINISHED HUMAN NOW */
+
 .footertext {
     display: flex;
     justify-content: space-between;
