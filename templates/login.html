@@ -25,4 +25,21 @@ Login | Scrabalatro
     <h5 class="topbar_notloggedinbutton"><a href="/register">Register</a></h5>
     <h3>(Balatro with Scrabble tiles)</h3>
 </div>
+
+<div class="login">
+    <h1>Login</h1>
+    <!-- WEEWOO AI -->
+    <button class="fb_login" type="button">
+    <img src="{{ url_for('static', filename='placeholder.png') }}" alt="" width=25px height=25px>
+    <span>Login with Facebook</span>
+    <!-- WEEWOO AI FINISHED -->
+</button>
+<button class="gg_login" type="button">
+    <img src="{{ url_for('static', filename='placeholder.png') }}" alt="" width=25px height=25px>
+    <span>Login with Google</span>
+</button>
+<h3>or</h3>
+<h4>Username</h4>
+
+</div>
 {% endblock %}
