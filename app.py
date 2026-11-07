@@ -2,11 +2,37 @@
 
 # imports the flask package
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Length, ValidationError
 
-
-# creates an app instance
+# creates an app instance 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///accounts.db'
+app.config['SECRET_KEY'] = "replacemedaddy"
+db = SQLAlchemy(app)
 
+
+# ===========ACCOUNTS DATABASE============
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(50), nullable=False, unique=True)
+    username = db.Column(db.String(20), nullable=False, unique=True)
+    # longer than on frontend, bc this is the HASH!!!
+    password = db.Column(db.String(80), nullable=False)
+
+
+class RegisterForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. dayman67"})
+    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. Password1"})
+    submit = SubmitField("THIS IS NEWSign Up")
+
+    def validateUsername(self, username):
+        pass
+
+# ===========END============
 
 # ===========ROUTING============
 # default when website domain is loaded, e.g. "youtube.com"
