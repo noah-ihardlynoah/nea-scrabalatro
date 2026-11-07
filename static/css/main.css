@@ -40,10 +40,16 @@
 ============================
 ============================ */
 
+/* ======GLOBAL CLASSES======= */
+.textarea {
+    background-color: #dddddd;
+    font-family: "Londrina Solid";
+    font-weight: 300;
+}
 
-
-
-
+/* ======END OF GLOBALS=====
+============================
+============================ */
 
 
 
@@ -246,31 +252,41 @@ footer {
 /* Login */
 /* WEEWOO AI ALERT STARTS */
 .login {
+    position: relative;
+    top: +20px;
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
     align-items: center;
     /* WEEWOO AI ALERT STARTS */
-    row-gap: 12px;
-    /* WEEWOOD AI FINISHED HUMAN NOW */
+    row-gap: 8px;
+    /* WEEWOO AI FINISHED HUMAN NOW */
+}
+
+.login a,
+.register a {
+    grid-column: 1;
+    justify-self: center;
+    font-family: "Londrina Solid";
+    font-weight: 400;
+    font-size: 12px;
+    /* WEEWOO AI ALERT STARTS */
+    margin: 0;
+    /* WEEWOO AI FINISHED HUMAN NOW */
 }
 
 .login h1 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
+    grid-column: 1;
     justify-self: center;
     font-family: "Londrina Outline";
     font-weight: 400;
     font-size: 30px;
+    /* WEEWOO AI ALERT STARTS */
+    margin: 0;
+    /* WEEWOO AI FINISHED HUMAN NOW */
 }
 
-.fb_login {
-    display: flex;
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    width: 300px;
-    justify-self: center;
-    font-family: "Londrina Solid";
+.fb_login,
+.fb_register {
     background-color: #3A5795;
     color: white;
     font-size: 24px;
@@ -278,7 +294,9 @@ footer {
 
 /* WEEWOO AI ALERT STARTS */
 .fb_login img,
-.gg_login img {
+.gg_login img,
+.fb_register img,
+.gg_register img {
     flex: 0 0 25px;
     width: 25px;
     height: 25px;
@@ -287,13 +305,8 @@ footer {
 }
 /* WEEWOOD AI FINISHED HUMAN NOW */
 
-.gg_login {
-    display: flex;
-    grid-column: 1 / span 2;
-    grid-row: 3;
-    width: 300px; 
-    justify-self: center;
-    font-family: "Londrina Solid";
+.gg_login,
+.gg_register {
     background-color: #4384F4;
     color: white;
     font-size: 24px;
@@ -301,7 +314,16 @@ footer {
 }
 /* WEEWOO AI ALERT STARTS */
 .fb_login,
-.gg_login {
+.gg_login, 
+.up_login,
+.fb_register,
+.gg_register,
+.up_register {
+    display: flex;
+    grid-column: 1;
+    width: 300px;
+    justify-self: center;   
+    font-family: "Londrina Solid";
     box-sizing: border-box;
     align-items: center;
     /* WEEWOO AI ALERT STARTS */
@@ -313,28 +335,178 @@ footer {
     border-radius: 8px;
     cursor: pointer;
 }
-/* WEEWOOD AI FINISHED HUMAN NOW */
+/* WEEWOO AI FINISHED HUMAN NOW */
 
-.login h3 {
-    padding-top: 2px;
-    grid-column: 1 / span 2;
-    grid-row: 4;
+.up_login,
+.up_register {
+    background-color: #444444;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+}
+.login h3,
+.register h3 {
+    grid-column: 1;
     justify-self: center;
     font-family: "Londrina Solid";
     font-weight: 200;
     font-size: 18px;
+    /* WEEWOO AI ALERT STARTS */
+    margin: 0;
+    /* WEEWOO AI FINISHED HUMAN NOW */
 }
 
 
 .login h4 {
-    padding-top: 2px;
-    grid-column: 1 / span 2;
-    grid-row: 5;
+    grid-column: 1;
     font-family: "Londrina Solid";
-    font-weight: 200;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    /* WEEWOO AI ALERT STARTS */
+    margin: 0;
+    width: 300px;
+    justify-self: center;
+    /* WEEWOO AI FINISHED HUMAN NOW */
 }
 
+.emailtxtarea {
+    grid-column: 1;
+    justify-self: center;
+    width: 300px;
+}
+
+/* WEEWOO AI ALERT STARTS */
+.emailtxtarea .textarea,
+.passwordtxtarea .textarea {
+    vertical-align: top;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 2px;
+    border: 1px solid #767676;
+}
+/* WEEWOO AI FINISHED HUMAN NOW */
+
+
+.login h5 {
+    grid-column: 1;
+    font-family: "Londrina Solid";
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    width: 300px;
+    justify-self: center;
+}
+
+.passwordtxtarea {
+    grid-column: 1;
+    justify-self: center;
+    width: 300px;
+}
+
+/* WEEWOO AI ALERT STARTS */
+.passwordtxtarea input.textarea {
+    padding-bottom: 18px;
+}
+/* WEEWOO AI FINISHED HUMAN NOW */
+
+/*================================ 
+==============END=================
+================================*/
+
+/* Register */
+/* WEEWOO AI ALERT STARTS */
+.register {
+    position: relative;
+    top: +20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    /* WEEWOO AI ALERT STARTS */
+    row-gap: 8px;
+    /* WEEWOO AI FINISHED HUMAN NOW */
+}
+
+
+
+.register h1 {
+    
+    grid-column: 1;
+    justify-self: center;
+    font-family: "Londrina Outline";
+    font-weight: 400;
+    font-size: 30px;
+    /* WEEWOO AI ALERT STARTS */
+    margin: 0;
+    /* WEEWOO AI FINISHED HUMAN NOW */
+}
+
+.fb_register {
+    display: flex;
+    grid-column: 1;
+    width: 300px;
+    justify-self: center;
+    font-family: "Londrina Solid";
+    background-color: #3A5795;
+    color: white;
+    font-size: 24px;
+}
+
+
+
+
+.register h4 {
+    grid-column: 1;
+    font-family: "Londrina Solid";
+    font-weight: 400;
+    font-size: 14px;
+    /* WEEWOO AI ALERT STARTS */
+    margin: 0;
+    width: 300px;
+    justify-self: center;
+    /* WEEWOO AI FINISHED HUMAN NOW */
+}
+
+.emailtxtarea {
+    grid-column: 1;
+    justify-self: center;
+    width: 300px;
+}
+
+/* WEEWOO AI ALERT STARTS */
+.emailtxtarea .textarea,
+.passwordtxtarea .textarea {
+    vertical-align: top;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 2px;
+    border: 1px solid #767676;
+}
+/* WEEWOO AI FINISHED HUMAN NOW */
+
+
+.register h5 {
+    grid-column: 1;
+    font-family: "Londrina Solid";
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    width: 300px;
+    justify-self: center;
+}
+
+.passwordtxtarea {
+    grid-column: 1;
+    justify-self: center;
+    width: 300px;
+}
+
+/* WEEWOO AI ALERT STARTS */
+.passwordtxtarea input.textarea {
+    padding-bottom: 18px;
+}
+/* WEEWOO AI FINISHED HUMAN NOW */
 
 /*================================ 
 ==============END=================

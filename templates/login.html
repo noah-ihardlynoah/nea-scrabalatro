@@ -28,6 +28,7 @@ Login | Scrabalatro
 
 <div class="login">
     <h1>Login</h1>
+    <a href="{{ url_for('register')}}">Don't have an account? Sign up</a>
     <!-- WEEWOO AI -->
     <button class="fb_login" type="button">
     <img src="{{ url_for('static', filename='placeholder.png') }}" alt="" width=25px height=25px>
@@ -39,7 +40,18 @@ Login | Scrabalatro
     <span>Login with Google</span>
 </button>
 <h3>or</h3>
-<h4>Username</h4>
+<h4>Email</h4>
+<div class="emailtxtarea">
+    <textarea class="textarea" placeholder="e.g. dayman67@gmail.com"></textarea>
+</div>
+<h5>Password</h5>
+<div class="passwordtxtarea">
+    <!-- WEEWOO AI ALERT STARTS -->
+    <input class="textarea" type="password" placeholder="e.g. Password1!">
+    <!-- WEEWOO AI FINISHED HUMAN NOW -->
+</div>
+<button class="up_login" type="button">
+    <span>Login</span>
 
 </div>
 {% endblock %}
