@@ -5,8 +5,8 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Length, ValidationError
+from wtforms import EmailField, StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Length, ValidationError, EqualTo
 
 # creates an app instance 
 app = Flask(__name__)
@@ -25,12 +25,28 @@ class User(db.Model, UserMixin):
 
 
 class RegisterForm(FlaskForm):
-    username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. dayman67"})
-    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. Password1"})
+    email = EmailField('Enter your email', validators=[InputRequired(), Length(min=4, max=30)], render_kw={"placeholder":"THIS IS NEWe.g. denreynolds@gmail.com"})
+    username = StringField('Enter a unique username', validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. dayman67"})
+    password = PasswordField('Enter a strong password', validators=[InputRequired(),EqualTo('confirmPassword', message='Passwords must match'), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. Password1"})
+    confirmPassword = PasswordField('Enter a strong password', validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEW"})
     submit = SubmitField("THIS IS NEWSign Up")
 
     def validateUsername(self, username):
-        pass
+        # returns the first name that comes up in username search, or if nothing comes up, returns None
+        # adapted from tutorial https://www.youtube.com/watch?v=71EU8gnZqZQ&t=4s
+        usernameExists = User.query.filter_by(
+            username=username.data).first() 
+        if usernameExists:
+            raise ValidationError(
+                "Username not unique. Choose again."
+        )
+
+class LoginForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. dayman67"})
+    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. Password1"})
+    submit = SubmitField("THIS IS NEWLogin")
+
+    
 
 # ===========END============
 
@@ -40,13 +56,15 @@ class RegisterForm(FlaskForm):
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def login():
-    return render_template('login.html')
+    form = LoginForm()
+    return render_template('login.html', form=form)
 
-@app.route('/register')
+@app.route('/register', methods=['GET','POST'])
 def register():
-    return render_template('register.html')
+    form = RegisterForm()
+    return render_template('register.html', form=form)
 
 if __name__ == "__main__":
     # debug=True so that errors are flagged immediately
