@@ -73,8 +73,10 @@ Register | Scrabalatro
     --------</div>
 <form method="POST" action="">
     {{ form.hidden_tag() }}
+    {{ form.email }}
     {{ form.username }}
     {{ form.password }}
+    {{ form.confirmPassword }}
     {{ form.submit }}
 </form>
 {% endblock %}
