@@ -1,6 +1,6 @@
 priv/
 .env
 OneDrive shortcut
-__pycache__
+__pycache__/
 .vscode/
 env/
