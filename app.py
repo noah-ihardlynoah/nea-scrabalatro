@@ -48,7 +48,7 @@ class RegisterForm(FlaskForm):
     username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. dayman67"})
     password = PasswordField(validators=[InputRequired(),EqualTo('confirmPassword', message='Passwords must match'), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. Password1"})
     confirmPassword = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. Password1"})
-    submit = SubmitField("THIS IS NEWSign Up", render_kw={"class":'up_register'})
+    submit = SubmitField("Sign Up", render_kw={"class":'up_register'})
 
     def validateEmail(self, email):
         # returns the first email that comes up in  search, or if nothing comes up, returns None
