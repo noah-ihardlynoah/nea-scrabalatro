@@ -88,13 +88,20 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
-        email_or_username = form.username.data
-        email_or_username = email_or_username.lower()
-        # regex to validate emails
-        if re.match("[a-z][a-z0-9]*@[a-z0-9]+.[a-z]+", email_or_username):
-            user = User.query.filter_by(email=email_or_username).first()
-        else:
-            user = User.query.filter_by(username=email_or_username).first()
+        # email_or_username = form.username.data
+        # email_or_username = email_or_username.lower()
+        # # regex to validate emails
+        # if re.match("[a-z][a-z0-9]*@[a-z0-9]+.[a-z]+", email_or_username):
+        #     user = User.query.filter_by(email=email_or_username).first()
+        # else:
+        #     user = User.query.filter_by(username=email_or_username).first()
+
+        # WEEWOO AI ALERT STARTS
+        user = User.query.filter(
+            db.func.lower(User.email) == form.email.data.strip().lower()
+        ).first()
+        # WEEWOO AI FINISHED HUMAN NOW
+
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)

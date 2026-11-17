@@ -264,6 +264,15 @@ footer {
     /* WEEWOO AI FINISHED HUMAN NOW */
 }
 
+/* WEEWOO AI ALERT STARTS */
+.login-form {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+}
+/* WEEWOO AI FINISHED HUMAN NOW */
+
 .login a,
 .register a {
     grid-column: 1;

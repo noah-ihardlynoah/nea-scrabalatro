@@ -1,3 +1,7 @@
 Whenever you make any changes, ALWAYS SURROUND THEM WITH COMMENTS which read as follows:
     Where the changes start: WEEWOO AI ALERT STARTS
     Where the changes end: WEEWOO AI FINISHED HUMAN NOW
+
+Instead of deleting any of my code, ALWAYS COMMENT IT OUT INSTEAD!!!!
+NEVER DELETE CODE NEVER NEVER NEVER! ONLY COMMENT OUT
+THIS INCLUDES COMMENTS, DONT EVEN DELETE THESE
