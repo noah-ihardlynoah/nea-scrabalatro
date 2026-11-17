@@ -339,8 +339,11 @@ footer {
 }
 /* WEEWOO AI FINISHED HUMAN NOW */
 
+
 .up_login,
 .up_register {
+    justify-self: center;
+    justify-content: center;
     background-color: #444444;
     color: white;
     font-size: 18px;

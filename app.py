@@ -63,9 +63,10 @@ class RegisterForm(FlaskForm):
         )
 
 class LoginForm(FlaskForm):
-    username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. dayman67"})
-    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. Password1"})
-    submit = SubmitField("THIS IS NEWLogin")
+    email = EmailField(validators=[InputRequired(), Length(min=4, max=50)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. denreynolds@gmail.com"})
+    # username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. dayman67"})
+    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. Password1"})
+    submit = SubmitField("THIS IS NEWLogin", render_kw={"class":'up_login'})
  
     
 
