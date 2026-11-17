@@ -31,17 +31,18 @@ Login | Scrabalatro
     <a href="{{ url_for('register')}}">Don't have an account? Sign up</a>
     <!-- WEEWOO AI -->
     <button class="fb_login" type="button">
-    <img src="{{ url_for('static', filename='placeholder.png') }}" alt="" width=25px height=25px>
+    <img src="{{ url_for('static', filename='fb_logo.webp') }}" alt="" width=25px height=25px>
     <span>Login with Facebook</span>
     <!-- WEEWOO AI FINISHED -->
 </button>
 <button class="gg_login" type="button">
-    <img src="{{ url_for('static', filename='placeholder.png') }}" alt="" width=25px height=25px>
+    <img src="{{ url_for('static', filename='gg_logo.webp') }}" alt="" width=25px height=25px>
     <span>Login with Google</span>
 </button>
 <!-- WEEWOO AI ALERT STARTS -->
 <form class="login-form" method="POST" action="">
     {{ form.hidden_tag() }}
+<!--WEEWOO AI FINISHED-->
 <h3>or</h3>
 <h4>Email</h4>
 <div class="emailtxtarea">
@@ -54,9 +55,7 @@ Login | Scrabalatro
 </div>
 <h5>Password</h5>
 <div class="passwordtxtarea">
-    <!-- WEEWOO AI ALERT STARTS -->
     <!-- <input class="textarea" type="password" placeholder="e.g. Password1!"> -->
-    <!-- WEEWOO AI FINISHED HUMAN NOW -->
      <!-- <form method="POST" action="">
         {{ form.hidden_tag()}}
         {{ form.password() }}
@@ -71,7 +70,7 @@ Login | Scrabalatro
 <!-- <button class="up_login" type="button">
     <span>Login</span>
 </div> -->
-<!--WEEWOO AI FINISHED NOW-->
+</form> 
 
 
 <div class='lazywhitespace'>------------------------------------------------------------------
@@ -87,7 +86,7 @@ Login | Scrabalatro
      {{ form.hidden_tag() }}
     {{ form.email() }} 
     {{ form.password() }}
-    {{ form.submit() }}
-</form> -->
+    {{ form.submit() }}-->
+
 </div>
 {% endblock %}

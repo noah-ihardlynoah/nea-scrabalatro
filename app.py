@@ -38,11 +38,17 @@ class User(db.Model, UserMixin):
 
 
 class RegisterForm(FlaskForm):
-    email = EmailField('Enter your email', validators=[InputRequired(), Length(min=4, max=30)], render_kw={"placeholder":"THIS IS NEWe.g. denreynolds@gmail.com"})
-    username = StringField('Enter a unique username', validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. dayman67"})
-    password = PasswordField('Enter a strong password', validators=[InputRequired(),EqualTo('confirmPassword', message='Passwords must match'), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEWe.g. Password1"})
-    confirmPassword = PasswordField('Enter a strong password', validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder":"THIS IS NEW"})
-    submit = SubmitField("THIS IS NEWSign Up")
+    # email = EmailField(validators=[InputRequired(), Length(min=4, max=30)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. denreynolds@gmail.com"})
+    # username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. dayman67"})
+    # password = PasswordField(validators=[InputRequired(),EqualTo('confirmPassword', message='Passwords must match'), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. Password1"})
+    # confirmPassword = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g.Password1"})
+    # submit = SubmitField("THIS IS NEWSign Up", render_kw={"class":'up_register'})
+
+    email = EmailField(validators=[InputRequired(), Length(min=4, max=30)], render_kw={"class":'textarea', "placeholder":"e.g. denreynolds@gmail.com"})
+    username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. dayman67"})
+    password = PasswordField(validators=[InputRequired(),EqualTo('confirmPassword', message='Passwords must match'), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. Password1"})
+    confirmPassword = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. Password1"})
+    submit = SubmitField("THIS IS NEWSign Up", render_kw={"class":'up_register'})
 
     def validateEmail(self, email):
         # returns the first email that comes up in  search, or if nothing comes up, returns None
@@ -63,10 +69,10 @@ class RegisterForm(FlaskForm):
         )
 
 class LoginForm(FlaskForm):
-    email = EmailField(validators=[InputRequired(), Length(min=4, max=50)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. denreynolds@gmail.com"})
+    email = EmailField(validators=[InputRequired(), Length(min=4, max=50)], render_kw={"class":'textarea', "placeholder":"e.g. denreynolds@gmail.com"})
     # username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. dayman67"})
-    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"THIS IS NEWe.g. Password1"})
-    submit = SubmitField("THIS IS NEWLogin", render_kw={"class":'up_login'})
+    password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"class":'textarea', "placeholder":"e.g. Password1"})
+    submit = SubmitField("Login", render_kw={"class":'up_login'})
  
     
 
